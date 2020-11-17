@@ -24,6 +24,7 @@ public class PersonRestService {
     
     @Value("${api.uri}")
     private String uri;
+    
     //getAll
     public List<Person> getAll(){
         List<Person> result;

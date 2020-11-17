@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  *
- * @author acer
+ * @author Mario Wijaya
  */
 @Service
 public class LoginRestService {

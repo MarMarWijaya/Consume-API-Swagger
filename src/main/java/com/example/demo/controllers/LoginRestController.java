@@ -15,12 +15,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
- * @author acer
+ * @author Mario Wijaya
  */
 @Controller
 public class LoginRestController {
     @Autowired 
     LoginRestService service;
+    
     @GetMapping("")
     public String index(Model model){
         model.addAttribute("logininput",new LoginInput());
@@ -34,5 +35,4 @@ public class LoginRestController {
         getId.id = service.getId(service.login(input));
         return "redirect:/basic";
     }
-    
 }

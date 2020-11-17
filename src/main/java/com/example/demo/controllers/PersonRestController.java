@@ -21,7 +21,6 @@ public class PersonRestController {
     @GetMapping("")
     public String index(Model model) {
         model.addAttribute("people", service.getAll());
-//        model.addAttribute("people", service.getById("P01"));
         model.addAttribute("person", new Person());
         return "index";
     }
@@ -65,5 +64,4 @@ public class PersonRestController {
         model.addAttribute("people", service.getFemaleGender("Female"));
         return "index";
     }
-
 }
