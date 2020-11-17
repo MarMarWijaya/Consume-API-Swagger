@@ -37,13 +37,13 @@ and open the template in the editor.
             </div>
         </nav>
         
-        <div style="margin-top: 5%">
+        <div style="margin-top: 2%">
             <center><form th:object="${education}" th:action="@{/saveeducation}" method="POST">
+                    <img src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png" width="10%">
+                    <p style="color: gray; margin-top: 1%" th:text="*{id}"></p>
                 <table width="25%" cellpadding="5%">
                     <tr>
-                        <td>ID</td>
-                        <td>:</td>
-                        <td><input type="text" readonly class="form-control-plaintext" id="staticEmail" th:field="*{id}" /></td>
+                        <td colspan="3"><input type="hidden" readonly class="form-control-plaintext" id="staticEmail" th:field="*{id}" /></td>
                     </tr>
 
                     <tr>
