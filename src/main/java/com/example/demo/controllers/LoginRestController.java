@@ -27,7 +27,7 @@ public class LoginRestController {
         return "login";
     }
     
-    @PostMapping("login")
+    @PostMapping("home")
     public String login(LoginInput input) {
         System.out.println(input);
         System.out.println(service.login(input));
