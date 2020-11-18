@@ -27,10 +27,13 @@ public class ProfileRestController {
     @Autowired
     ProfileRestService service;
     
-    @GetMapping("basic")
+    
+    
+    @GetMapping("")
     public String profileBasic(Model model){
         model.addAttribute("basic", service.getProfileBasic(getId.id));
         System.out.println(service.getProfileBasic(getId.id));
+        System.out.println(service.getUserId());
         return "profileBasic";
     }
     

@@ -22,17 +22,17 @@ public class LoginRestController {
     @Autowired 
     LoginRestService service;
     
-    @GetMapping("")
+    @GetMapping("/login")
     public String index(Model model){
         model.addAttribute("logininput",new LoginInput());
         return "login";
     }
     
-    @PostMapping("home")
+    @PostMapping("/login_execute")
     public String login(LoginInput input) {
         System.out.println(input);
         System.out.println(service.login(input));
         getId.id = service.getId(service.login(input));
-        return "redirect:/basic";
+        return "redirect:/";
     }
 }

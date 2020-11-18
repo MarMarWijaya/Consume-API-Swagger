@@ -37,4 +37,6 @@ public class LoginRestService {
     public String getId(LoginOutput output) {
         return output.getUser().getId();
     }
+    
+    
 }
